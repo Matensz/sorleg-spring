@@ -19,4 +19,6 @@ public interface PlayerRepository extends CrudRepository<Player, Long> {
 
     Player findPlayerByLastName(String name);
 
+    Player findTopByOrderByPointsDesc();
+
 }

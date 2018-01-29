@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
+@RequestMapping("/api")
 public class PlayerController {
 
     private PlayerService playerService;
@@ -37,6 +38,11 @@ public class PlayerController {
     @RequestMapping(path = "/player/name/{name}")
     public Player getPlayerByLastName(@PathVariable("name") String name) {
         return playerService.getPlayerByLastName(name);
+    }
+
+    @RequestMapping("/player/first")
+    public Player getFirstPlayerByPoints() {
+        return playerService.getFirstPlayerByPoints();
     }
 
 }

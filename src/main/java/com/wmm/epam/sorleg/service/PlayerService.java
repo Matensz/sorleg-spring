@@ -33,4 +33,8 @@ public class PlayerService {
         return playerRepository.findPlayerByLastName(name);
     }
 
+    public Player getFirstPlayerByPoints() {
+        return playerRepository.findTopByOrderByPointsDesc();
+    }
+
 }
