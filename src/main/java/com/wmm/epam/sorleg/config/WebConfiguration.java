@@ -15,7 +15,7 @@ public class WebConfiguration extends WebMvcConfigurerAdapter {
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
         CorsConfiguration configuration = new CorsConfiguration();
         configuration.setAllowCredentials(true);
-        configuration.addAllowedOrigin("*");
+        configuration.addAllowedOrigin("http://localhost:8000");
         configuration.addAllowedHeader("*");
         configuration.addAllowedMethod("OPTIONS");
         configuration.addAllowedMethod("GET");
